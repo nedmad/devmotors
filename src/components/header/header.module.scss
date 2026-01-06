@@ -1,0 +1,44 @@
+.header{
+position: fixed;
+padding: 15px;
+width: 100%;
+z-index: 99;
+}
+
+.fixed{
+    background-color: rgb(252, 252, 252,0.7);
+    backdrop-filter: blur(4px);
+}
+.background{
+    background-color: rgb(252, 252, 252);
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav{
+    display: flex;
+    gap: 30px;
+    a{
+        transition: all 0.8s;
+        
+        &:hover{
+            transform: scale(1.09);
+            font-weight: bold;
+
+        }
+    }
+}
+
+@media (max-width:650px) {
+    .logo{display: none}
+    .container{
+      
+        justify-content: left;
+
+    }
+}

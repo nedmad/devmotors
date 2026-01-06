@@ -1,0 +1,44 @@
+.footer{
+    background-color: black;
+    color: wheat;
+    width: 80%;
+    margin: 120px auto 10px auto;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.titleContatos{
+    font-size: 30px;
+    text-align: center;
+}
+
+.contatos{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+
+}
+.contato{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.direitos{
+    margin-top: 70px;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+@media (min-width:640px){
+    .contatos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width:850px){
+    .footer{
+        width: 60%;
+    }
+}

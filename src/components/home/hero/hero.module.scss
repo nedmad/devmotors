@@ -1,0 +1,54 @@
+.heroContain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.heroHeader{
+    text-align: center;
+    position: absolute;
+    color: aliceblue;
+    width: 100%;
+    z-index: 10;
+}
+.title{
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.link{
+    color: aliceblue;
+    background-color: rgb(59, 224, 59);
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.4s;
+    display: inline-block;
+    &:hover{
+        transform: scale(1.08);
+    }
+}
+
+.heroBanner{
+    width: 100%;
+    background-color: black;
+    height: 440px;
+    position: relative;
+}
+.imageBanner{
+    object-fit: cover;
+    opacity: 0.35;
+}
+
+
+@media (min-width:650px){
+    .title{
+        font-size: 35px;
+    }
+}
