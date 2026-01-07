@@ -4,6 +4,52 @@ import getItemBySlug from "@/utils/cms/getHome";
 import { ItemSlug } from "@/utils/types/itemSlug";
 import style from "./post.module.scss";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  try {
+    const { slug } = await params;
+    const { objects }: ItemSlug = await getItemBySlug(slug).catch(() => {
+      return {
+        title: "DevMotors",
+        description:
+          "Escolha o serviço completo para seu carro. Escolha DevMotors!",
+      };
+    });
+    const data = objects[0];
+
+    return {
+      title: `DevMotors - ${data.title}`,
+      description:
+        "Escolha o serviço completo para seu carro. Escolha DevMotors!",
+      openGraph: {
+        title: `DevMotors - ${data.title}`,
+        images: [data.metadata.banner.url],
+      },
+      robots: {
+        index: true,
+        follow: true,
+        nocache: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          noimageindex: true,
+        },
+      },
+    };
+  } catch (err) {
+    return {
+      title: "DevMotors",
+      description:
+        "Escolha o serviço completo para seu carro. Escolha DevMotors!",
+    };
+  }
+}
+
 export default async function PageSlug({
   params,
 }: {

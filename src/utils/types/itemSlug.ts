@@ -1,6 +1,8 @@
 export interface ItemSlug {
     objects: [
         {
+            slug: string
+            title: string
             metadata: {
                 banner: {
                     url: string
