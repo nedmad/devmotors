@@ -10,6 +10,9 @@ import { MenuCms } from "@/utils/types/menu";
 export default async function Home() {
   const { object }: HomeCms = await getHome();
   const data: MenuCms = await getSubmenu();
+  if (!object) {
+    return;
+  }
   return (
     <>
       <main>

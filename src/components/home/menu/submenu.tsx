@@ -19,6 +19,9 @@ export default function SubMenu({ objects }: MenuCms) {
   function toggleSize() {
     setToggleMenu(!toggleMenu);
   }
+  if (!objects) {
+    return;
+  }
   return (
     <>
       <section className={style.submenu}>
