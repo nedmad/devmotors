@@ -4,6 +4,6 @@ export interface MenuCms {
             slug: string
             title: string
         }
-    ]
+    ] | null
 
 }

@@ -7,6 +7,9 @@ import { MenuCms } from "@/utils/types/menu";
 
 export default function SubMenu({ objects }: MenuCms) {
   const [toggleMenu, setToggleMenu] = useState(false);
+  if (!objects) {
+    return;
+  }
   useEffect(() => {
     const sizeVerify = () => {
       if (window.innerWidth > 750) {
