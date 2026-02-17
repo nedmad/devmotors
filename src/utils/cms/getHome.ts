@@ -9,7 +9,7 @@ export async function getHome() {
         }
         return res.json()
     } catch (err) {
-        throw new Error("Erro ao requisitar")
+        console.log("Erro ao requisitar")
     }
 }
 
@@ -23,7 +23,7 @@ export async function getSubmenu() {
         }
         return res.json()
     } catch (err) {
-        throw new Error("Erro ao requisitar")
+        console.log("Erro ao requisitar")
     }
 }
 
@@ -43,7 +43,7 @@ export default async function getItemBySlug(slug: string) {
         const res = await fetch(url)
 
         if (!res.ok) {
-            throw new Error("Teste de erro");
+            console.log("Teste de erro");
             redirect("/")
 
 
