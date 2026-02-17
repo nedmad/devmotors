@@ -13,7 +13,6 @@ export default async function Home() {
   return (
     <>
       <main>
-        <SubMenu objects={data.objects} />
         <Hero
           buttomTitle={object.metadata.button.title}
           heading={object.metadata.heading}
