@@ -19,9 +19,6 @@ export default function SubMenu({ objects }: MenuCms) {
   function toggleSize() {
     setToggleMenu(!toggleMenu);
   }
-  if (!objects) {
-    return;
-  }
   return (
     <>
       <section className={style.submenu}>
@@ -39,7 +36,7 @@ export default function SubMenu({ objects }: MenuCms) {
               />
             </li>
           )}
-          {objects.map((e) => (
+          {objects?.map((e) => (
             <li key={e.slug}>
               <Link href={`/post/${e.slug}`}>{e.title}</Link>
             </li>
