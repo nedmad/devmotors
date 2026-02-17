@@ -36,11 +36,6 @@ export default function SubMenu({ objects }: MenuCms) {
               />
             </li>
           )}
-          {objects?.map((e) => (
-            <li key={e.slug}>
-              <Link href={`/post/${e.slug}`}>{e.title}</Link>
-            </li>
-          ))}
         </ul>
       </section>
     </>
